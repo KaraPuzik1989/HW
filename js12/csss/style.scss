@@ -1,0 +1,42 @@
+$main-color: aquamarine;
+$btn-color: rgb(22, 45, 220);
+$active-color: rgb(10, 196, 31);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.tabs-wrapper {
+  padding: 20px;
+  background-color: $main-color;
+  button {
+    background-color: $btn-color;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    &:hover {
+      background-color: $active-color;
+    }
+    &.active {
+      background-color: $active-color;
+    }
+  }
+  div {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.7s;
+    &.active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transition: 0.7s;
+    }
+  }
+}
